@@ -6,6 +6,7 @@ const devPath = path.resolve(__dirname, 'dev');
 const mainFile = 'index.js';
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 function getEntry() {
     let entryMap = {};
@@ -91,6 +92,10 @@ module.exports = {
         }
     },
     plugins:[
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new CopyWebpackPlugin([
+            { from: 'src/json', to: path.resolve(distPath, 'json'), force: true },
+            { from: 'src/static', to: path.resolve(distPath, 'static'), force: true }
+        ]),
     ].concat(htmlArray)
 }
