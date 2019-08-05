@@ -1,0 +1,1 @@
+export const CHANGE_SCROLLLOAD_STATE = 'change_scrollload_state';

@@ -1,0 +1,23 @@
+.title{
+    font-size: px2rem(17px);
+    line-height: 1.4;
+    font-weight: 800;
+    margin-top: px2rem(15px);
+    margin-bottom: px2rem(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before,&::after{
+        content: '';
+        display: block;
+        width: px2rem(30px);
+        height: px2rem(1px);
+        background-color: #666;
+    }
+    &::before{
+        margin-right: px2rem(3px);
+    }
+    &::after{
+        margin-left: px2rem(3px);
+    }
+}

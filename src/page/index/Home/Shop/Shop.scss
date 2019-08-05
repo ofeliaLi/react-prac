@@ -1,0 +1,89 @@
+.shop{
+    font-size: px2rem(11px);
+    background-color: #fff;
+    .container{
+        overflow: hidden;
+    }
+}
+.shop-item-con{
+    display: flex;
+    padding: 0 px2rem(10px);
+    margin: px2rem(10px) 0 px2rem(25px) 0;
+}
+.content-left{
+    width: px2rem(76px);
+    height: px2rem(57px);
+    position: relative;
+    margin-right: px2rem(8px);
+    .type-icon{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: px2rem(26px);
+        z-index: 1;
+    }
+    .shop-icon{
+        height: px2rem(57px);
+        width: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.content-right{
+    flex: 1;
+    .shop-title{
+        font-weight: 600;
+        font-size: px2rem(16px);
+        color: #333;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+    }
+}
+.info{
+    display: flex;
+    margin-top: px2rem(8px);
+    .sale{
+        flex: 1 0;
+        display: flex;
+        .score{
+            margin-left: px2rem(4px);
+        }
+        .count{
+            flex: 1;
+            margin-left: px2rem(10px);
+        }
+    }
+    .time{
+        text-align: right;
+    }
+}
+.shipping{
+    margin-top: px2rem(8px);
+}
+.discount{
+    .dis-item{
+        margin-top: px2rem(8px);
+        display: flex;
+        align-items: center;
+    }
+    .dis-icon{
+        width: px2rem(15px);
+        height: px2rem(15px);
+        margin-right: px2rem(5px);
+    }
+}
+.spaceicon{
+    &::before{
+        content: "";
+        display: inline-block;
+        margin: 0 px2rem(3px);
+        height: px2rem(6px);
+        width: px2rem(1px);
+        background: #ccc;
+    }
+}

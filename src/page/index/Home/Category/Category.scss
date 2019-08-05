@@ -1,0 +1,19 @@
+.category{
+    margin-top: px2rem(50px);
+    .cate-item{
+        width: 20%;
+        float: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: px2rem(44px);
+            height: px2rem(44px);
+            margin: px2rem(15px) 0 px2rem(2px) 0;
+        }
+    }
+    .cate-name{
+        font-size: px2rem(11px);
+    }
+}

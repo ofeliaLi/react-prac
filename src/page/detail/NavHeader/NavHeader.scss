@@ -1,0 +1,23 @@
+.content{
+    height: px2rem(50px);
+    z-index: 1000;
+    background-color: rgb(46, 47, 59);
+    .icon{
+        position: relative;
+        display: inline-block;
+        width: px2rem(40px);
+        height: px2rem(50px);
+        &::before{
+            position: absolute;
+            top: 50%;
+            left: px2rem(20px);
+            content: "";
+            display: inline-block;
+            width: px2rem(8px);
+            height: px2rem(8px);
+            border-top: px2rem(2px) solid #fff;
+            border-left: px2rem(2px) solid #fff;
+            transform: rotateZ(-45deg) translateY(-50%);
+        }
+    }
+}

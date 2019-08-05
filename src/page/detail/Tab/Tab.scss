@@ -1,0 +1,30 @@
+.tab{
+    display: flex;
+    height: px2rem(40px);
+    min-height: px2rem(40px);
+    z-index: 1;
+    background-color: #ffffff;
+}
+.tab-item{
+    flex: 1;
+    font-size: px2rem(16px);
+    position: relative;
+    text-align: center;
+    line-height: px2rem(40px);
+    &.active{
+        font-weight: bolder;
+        color: #333333;
+        .tab-icon{
+            &::after{
+                content: "";
+                display: inline-block;
+                position: absolute;
+                bottom: 0px;
+                left: 50%;
+                width: px2rem(20px);
+                margin-left: px2rem(-10px);
+                border-bottom: solid px2rem(2px) #ffd300;
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+export const CHANGE_DETAIL_TAB = 'change_detail_tab';
+export const FETCH_FOOD_LIST = 'fetch_food_list';
+export const FETCH_MENU_LIST = 'fetch_menu_list';
+export const CHANGE_ACTIVE_ITEM = 'change_active_item';
+export const ADD_ITEM_COUNT = 'add_item_count';
+export const MINUS_ITEM_COUNT = 'minus_item_count';
+export const CLEAR_CART = 'clear_cart';
+export const UPDATE_MODAL_DATA = 'update_modal_data';
+export const CLOSE_MODAL = 'close_modal';

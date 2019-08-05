@@ -1,0 +1,22 @@
+.loading{
+    .loading-icon{
+        background-image: url('./img/loading.png');
+        width: px2rem(20px);
+        height: px2rem(20px);
+        display: inline-block;
+        background-size: contain;
+        vertical-align: middle;
+        margin-right: px2rem(10px);
+        animation: rotate 1.2s linear infinite;
+    }
+    font-size: px2rem(16px);
+    color: #ccc;
+    text-align: center;
+    margin-top: px2rem(10px);
+    margin-bottom: px2rem(70px);
+}
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg)
+    }
+}

@@ -1,0 +1,58 @@
+.container{
+    position: relative;
+    padding-left: px2rem(95px);
+    padding-top: px2rem(5px);
+    width: 100%;
+    height: px2rem(80px);
+    box-sizing: border-box;
+    background-color: #2E2F3B;
+}
+.shop-pic{
+    position: absolute;
+    left: px2rem(10px);
+    top: px2rem(5px);
+    width: px2rem(85px);
+    height: px2rem(64px);
+    box-shadow: 0 px2rem(2px) px2rem(15px) 0 rgba(0, 0, 0, 0.15);
+    border-radius: px2rem(2px);
+    background-size: px2rem(85px) px2rem(64px);
+    background-repeat: no-repeat;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.shop-info{
+    color:#fff;
+    padding-left: px2rem(10px);
+    .basic-item,.anno{
+        line-height: px2rem(16px);
+        height: px2rem(16px);
+        font-size: px2rem(10px);
+    }
+    .basic-item{
+        margin-bottom: px2rem(5px);
+    }
+    .anno{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .discount-item{
+        height: 20px;
+        .discount-icon{
+            display: inline-block;
+            vertical-align: middle;
+            width: px2rem(15px);
+            height: px2rem(15px);
+            background-size:cover;
+        }
+        .discount-text{
+            line-height: px2rem(15px);
+            vertical-align: middle;
+            font-size: px2rem(12px);
+            width: 100%;
+            margin-left: px2rem(6px);
+        }
+    }
+}

@@ -1,0 +1,169 @@
+.menu{
+    display: flex;
+    position: absolute;
+    top: px2rem(170px);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+.left-bar{
+    width: px2rem(80px);
+    flex: 0 0 auto;
+    height: 100%;
+    overflow: auto;
+    .left-item{
+        background-color: #f5f5f5;
+        &.active{
+            background-color: #fff;
+            font-weight: bold;
+        }
+    }
+    .item-inner{
+        box-sizing: border-box;
+        padding: px2rem(10px);
+        min-height: px2rem(49px);
+        display: flex;
+        align-items: center;
+        padding-bottom: px2rem(22px);
+    }
+    .item-text{
+        font-size: px2rem(13px);
+        line-height: px2rem(18px);
+        color: #666666;
+        img{
+            width: px2rem(15px);
+            height: px2rem(15px);
+            margin-right: px2rem(3px);
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+}
+.right-bar{
+    flex: 1;
+    display: flex;
+    margin-left: px2rem(10px);
+    height: 100%;
+    overflow: auto;
+    .title{
+        height: px2rem(36px);
+        font-size: px2rem(12px);
+        line-height: px2rem(36px);
+        width: 100%;
+        background-color: #fff;
+    }
+}
+.modal-wrap{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.panel{
+    width: 84vw;
+    max-height: 60vh;
+    background-color: transparent;
+    border-radius: px2rem(8px);
+    position: relative;
+    padding-bottom: px2rem(60px);
+    .button{
+        position: absolute;    
+        height: 40px;
+        width: 40px;
+        background-image: url('./img/button.png');
+        background-size: contain;
+        left: 50%;
+        margin-left: -20px;
+        bottom: 6px;
+    }
+}
+.panel-header{
+    padding: 0 px2rem(12px);
+    background-color: #fff;
+    text-align: center;
+    height: px2rem(43px);
+    line-height: px2rem(43px);
+    .text{
+        display: inline-block;
+        font-size: px2rem(16px);
+        color: #2f2f2f;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: calc(100% - 72px);
+    }
+}
+.panel-info{
+    padding: 0 px2rem(12px);
+    max-height: 50vh;
+    overflow-y: scroll;
+    background-color: #fff;
+    .panel-item{
+        margin-top: px2rem(15px);
+        .title{
+            color: #2F2F2F;
+            font-size: px2rem(12px);
+            height: px2rem(20px);
+            line-height: px2rem(20px);
+            margin-bottom: px2rem(5px);
+        }
+        .cate{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .cate-box{
+            height: px2rem(30px);
+            min-width: px2rem(75px);
+            max-width: 100%;
+            font-size: px2rem(12px);
+            color: #333333;
+            position: relative;
+            margin-right: px2rem(10px);
+            box-sizing: border-box;
+            line-height: px2rem(30px);
+            text-align: center;
+            padding: 0 px2rem(10px);
+            flex: 0 0 auto;
+            margin-bottom: px2rem(10px);
+            border: 1px solid #c4c4c4;
+            &.active{
+                border: 1px solid #ffb000;
+                color: #FFB000;
+                background-color: #FFFBF1;
+            }
+        }
+    }
+}
+.panel-price{
+    height: px2rem(45px);
+    background-color: #fafafa;
+    border-bottom-left-radius: px2rem(8px);
+    border-bottom-right-radius: px2rem(8px);
+    display: flex;
+    align-items: center;
+    padding: 0 px2rem(15px);
+    .price{
+        font-size: px2rem(24px);
+        color: #fb4e44;
+        flex: 1;
+    }
+    .submit{
+        background: #FFD161;
+        background-image: linear-gradient(-135deg, #FFBD27 0%, #FFD161 100%);
+        border-radius: px2rem(25px);
+        height: px2rem(25px);
+        line-height: px2rem(25px);
+        font-size: px2rem(12px);
+        text-align: center;
+        color:#333;
+        padding: 0 px2rem(15px);
+    }
+}

@@ -1,0 +1,11 @@
+@function px2rem ($px) {
+    $fontsize : 37.5px;
+    @return ($px/$fontsize) + rem
+}
+
+.clearfix::after{
+    content: '';
+    height: 0;
+    display: block;
+    clear: both;
+}
