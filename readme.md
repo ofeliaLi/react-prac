@@ -23,7 +23,7 @@ react + redux +  react-router-dom +  webpack + ES6/7/8
 ### 添加商品及购物车功能
 ![detail.gif](https://i.loli.net/2019/08/05/s7YWC59G8pHciEK.gif)
 
-##个人总结
+## 个人总结
 实践就可以发现对于各种知识都有理解不到位甚至是不理解的地方，通过动手+总结+repeat 不断进步吧
 #### 什么是react
 React主要用于构建UI，在MVC模式中，只作为V层（视图层）。React强调组件化，聚焦于视图层，将界面分成了各个独立的小块，每一块就是一个组件，组件的组合、嵌套组成了页面。
