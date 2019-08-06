@@ -42,3 +42,13 @@ diff算法执行时有三个维度，Tree diff、Components diff和Elements diff
 Tree diff：对dom树的进行分层比较，如果某一节点不存在了，则会直接销毁这个节点及其所包含的所有子节点，替换成新的节点。
 Components diff：组件间比较时，对于同一类型的组件，根据shouldComponentUpdate( )判断虚拟DOM是否发生了变化，若没有变化就不需要在进行diff，如果变化了，就对相关节点进行update；对于非同一类的组件，将进行直接替换，删掉旧组件，重建新组件。
 Elements diff：对于同一层级的子节点，他们都可以通过key来区分（因此我们需要确保某个元素的key在同级中具有唯一性），常见类型就是列表，同一个列表由旧变新有三种行为，插入、移动和删除，它根据指定的key值，先将所有列表遍历一遍，确定要新增和删除的，再确定需要移动的。
+
+#### React组件
+1. 无状态组件：
+     ```javascript 
+	 let Hello = props => <div>Hello {props.name}</div> 
+	 ```
+	接受props作为参数，返回有效的JSX的js函数；组件只负责根据传入的props来展示，当props改变时，重新渲染，不涉及state状态的操作；当组件不需要用到生命周期函数以及无需state时，使用函数式无状态组件可以有效提升组件性能、便于测试。
+	
+2. React.Component: 
+以ES6的class来创建React的组件，这是React目前极为推荐的创建有状态组件的方式，定义的class继承了React.Component所有的属性和方法(组件的生命周期函数就是从这来的)。
