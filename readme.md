@@ -69,3 +69,30 @@ this.setState((state, props) => ({
 ````
 何时异步？
 在 React 的 setState 函数实现中，会根据一个变量 isBatchingUpdates 判断是直接更新 this.state 还是放到队列中回头再说，而 isBatchingUpdates 默认是 false，也就表示 setState 会同步更新 this.state，但是，有一个函数 batchedUpdates，这个函数会把 isBatchingUpdates 修改为 true，而当 React 在调用事件处理函数之前就会调用这个 batchedUpdates，造成的后果，就是由 React 控制的事件处理过程 setState 不会同步更新 this.state。而绕过 React 通过 JavaScript 原生 addEventListener 直接添加的事件处理函数，还有使用 setTimeout/setInterval 等 React 无法掌控的 APIs情况下，就会出现同步更新 state 的情况。
+
+### 组件的生命周期
+#### 挂载mount：
+constructor( )：
+	组件挂载前，调用它的构造函数，但如果不需要初始化state即不使用this.state来对内部state赋值，或者不用为事件处理函数绑定实例，则无需为React组件实现构造函数。
+
+getDerivedStateFromProps(props, state)：
+	不管什么原因，都会在每次渲染前触发此方法，此方法用于state的值取决于props的值的情况。
+
+render( )：
+	创建虚拟dom，进行diff算法，更新dom树都在此进行
+	
+componentDidMount( )：
+	组件挂载后立即调用。
+#### 更新时：
+shouldComponentUpdate( )：
+	当props或state发生变化时，此方法会在渲染执行之前被调用，返回值默认为true（现阶段如果返回false的话，组件将不会调用render方法，但官方文档有说后续版本React可能会建此方法视为提示而非严格指令，当返回false时，仍可能导致组件重新渲染；）
+	
+getSnapshotBeforeUpdate( prevProps, prevState):
+	在最近一次渲染提交到DOM节点前调用，使得组件在发生更改前都DOM获取一些信息，方法的任何返回值将作为参数传递给componentDidUpdate。
+	
+componentDidUpdate( )：
+	会在更新后被立即调用，当在此方法中调用setstate()时，必须将它包裹在一个条件与距离，否则会导致死循环。
+
+#### 卸载unmount：
+componentWillUnmount( ):
+在组件卸载及销毁之前调用，在此方法中执行必要的清理操作，清除timer，取消网络请求，清除在compoenntDidMount中创建的订阅等。
